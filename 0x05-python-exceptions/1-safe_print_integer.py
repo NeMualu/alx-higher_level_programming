@@ -1,4 +1,4 @@
-afe_print_integer(value):
+def safe_print_integer(value):
     """Prints an integer using "{:d}".format().
 
     Args:

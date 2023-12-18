@@ -1,4 +1,6 @@
-st_division(my_list_1, my_list_2, list_length):
+#!/usr/bin/python3
+
+def list_division(my_list_1, my_list_2, list_length):
     """Divides two lists element by element.
 
     Args:
