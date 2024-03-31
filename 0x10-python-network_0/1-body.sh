@@ -1,4 +1,3 @@
-#!/bin/bash
-# This Bash script takes in a URL, sends a GET request to the URL, and displays the body of the response
-# Using curl to send a GET request to the provided URL and following redirections, then outputting the HTTP status code
-curl -sIL "$1" | grep -E "^HTTP" | tail -n1 | awk '{print $2}'
+#!/bin/bash                                                                   
+# a Bash script that takes in a URL, sends a GET request to the URL, and displays the body of the response                                                  
+if [ "$(curl -sLI "$1" -X GET | grep "200 OK" | cut -d' ' -f2)" = '200' ]; then curl -sL "$1"; fi
